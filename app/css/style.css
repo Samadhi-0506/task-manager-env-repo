@@ -1,0 +1,73 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0077b6;
+    color: white;
+    align-items: center;
+}
+
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #0096c7;
+    color: white;
+}
+
+button:hover {
+    background-color: #00b4d8;
+}
+
+.task-entry, .task-controls {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+input, select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#taskList {
+    list-style: none;
+    padding: 20px;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: grab;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.low { border-left: 5px solid green; }
+.medium { border-left: 5px solid orange; }
+.high { border-left: 5px solid red; }
+
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode #taskList li {
+    background-color: #333;
+}
