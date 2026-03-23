@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskapp-green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: taskapp
+      version: green
+  template:
+    metadata:
+      labels:
+        app: taskapp
+        version: green
+    spec:
+      containers:
+      - name: taskapp
+        image: nginx:latest
+        volumeMounts:
+        - name: task-content
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: task-content
+        configMap:
+          name: taskapp-content
